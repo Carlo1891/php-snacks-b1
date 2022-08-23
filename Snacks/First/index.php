@@ -8,8 +8,46 @@
     </head>
 
     <body>
+        <h1>Calendario stagione</h1>
         <!-- Creiamo un array contenente le partite di basket di un'ipotetica tappa del calendario. Ogni array avrà una squadra di casa e una squadra ospite, punti fatti dalla squadra di casa e punti fatti dalla squadra ospite. Stampiamo a schermo tutte le partite con questo schema.
-            Olimpia Milano - Cantù | 55-60 -->
+        Olimpia Milano - Cantù | 55-60 -->
+
+        <?php
+
+        $teams = [
+            [
+                "firstTeam" => "Olimpia Milano",
+                "secondTeam" => "Cantù",
+                "firstScore" => "55",
+                "secondScore" => "60",
+            ],
+            [
+                "firstTeam" => "AS Roma",
+                "secondTeam" => "SS Lazio",
+                "firstScore" => "70",
+                "secondScore" => "60",
+            ],
+            [
+                "firstTeam" => "Chicago Bulls",
+                "secondTeam" => "LS Lakers",
+                "firstScore" => "60",
+                "secondScore" => "60",
+            ],
+            [
+                "firstTeam" => "All Blacks",
+                "secondTeam" => "Italy",
+                "firstScore" => "100",
+                "secondScore" => "20",
+            ]
+        ];
+
+        for ($index = 0; $index < count ($teams); $index ++) {
+            $games = "h2" . $teams[$index] ["firstTeam"] . "-" . $teams[$index] ["secondTeam"] . "VS" . $teams[$index]["firstScore"] . "-" . $teams[$index]["SecondScore"] . "</h5>";
+            echo $games;
+        }
+        
+    ?>
+        
         
     </body>
 </html>
