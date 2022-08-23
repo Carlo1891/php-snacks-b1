@@ -42,7 +42,7 @@
         ];
 
         for ($index = 0; $index < count ($teams); $index ++) {
-            $games = "h2" . $teams[$index] ["firstTeam"] . "-" . $teams[$index] ["secondTeam"] . "VS" . $teams[$index]["firstScore"] . "-" . $teams[$index]["SecondScore"] . "</h5>";
+            $games = "<h2>" . $teams[$index]["firstTeam"] . " VS " . $teams[$index]["secondTeam"] . "-" . $teams[$index]["firstScore"] . "-" . $teams[$index]["SecondScore"] . "</h2>";
             echo $games;
         }
         
