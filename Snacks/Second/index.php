@@ -14,7 +14,15 @@
         Se tutto è ok stampare "Accesso riuscito", altrimenti "Accesso negato" -->
 
         <?php
+            $name = $_GET['name'];
+            $email = $_GET['email'];
+            $age = $_GET['age'];
 
+            if (strlen($name) > 3 && strpos($email, '@') !== false && strpos($email, '.') !== false && is_numeric($age) > 17) {
+                echo "<h4>Benvenuto!" . $name . "</h4>";
+            } else {
+                echo "<h4>ERRORE, ritentare. Inserisci Nome Mail ed Età</h4>";
+            }
         ?>
         
         
